@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="gallery.css">
+    <title>Club Gallery</title>
+    <style>
+        body {
+            background-color: #19A7CE;
+            color:black;
+            font-family: Arial, sans-serif;
+            background-color: #97DEFF;
+            padding: 20px;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            height: 250px;
+            width: 250px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item {
+    transition: transform 0.5s;
+        }
+        .gallery-item:hover  {
+            transform: scale(1.1);
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox img {
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #fff;
+            font-size: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="custom-header text-center p-3">
+        <div class="container">
+            <h1>Club Gallery</h1>
+        </div>
+    </header>
+    <div class="gallery-section">
+        <div class="gallery-section">
+            <div class="custom-header">
+                <h2>Sports Clubs</h2>
+            </div>
+            
+            <div class="gallery-container">
+                <!-- Subsection for Sports Clubs -->
+                <div class="gallery-item">
+                    <h3>Football</h3>
+                    <img src="https://lh3.googleusercontent.com/drive-storage/AKHj6E4U_jMtc-inw8sv1720OKIDCBAKKSMYuYftX__HT9r7E4mdpvjm3Gm92td1t8hnQBzHsZOd-ehp9LcAihLCPD1HYDTGexuIcakw3YWSqA" alt="Football Club 1">
+                    <img src="https://lh3.googleusercontent.com/drive-storage/AKHj6E6dgD7qRVaFktDcnPN6Q-zLktrM54fgWq-GEixnC3lltQGea4nXDww5Z2o5fHcX2Ggc0Bfh4mDeonQtrIk1rzy-RXHa30O1DVtzVd4MNA=h600-nu" alt="Football Club 2">
+                </div>
+                <div class="gallery-item">
+                    <h3>Basketball</h3>
+                    <img src="https://lh3.googleusercontent.com/drive-storage/AKHj6E6ApbpFHVADea3Drk1avgMNjfs1LS78CHbzbbRokouMeZpSwufBbxZZ1PyyY02TVIGYZaTHuzfM2Ni32bmQo-NNtgEoLmWtqwVus90r1A" alt="Basketball Club 1">
+                    <img src="https://vitbhopal.ac.in/file/2020/07/cl12-1.png" alt="Basketball Club 2">
+                    <img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.6435-9/78633976_938188959897343_5764118768640851968_n.jpg?stp=dst-jpg_p960x960&_nc_cat=101&ccb=1-7&_nc_sid=810d5f&_nc_ohc=Mv90WGUzsx4AX8gRLD2&_nc_ht=scontent-bom1-1.xx&oh=00_AfAbgSOqP1VzmA7V37lNRu3yWaL03BrYJkWclx_3GTTUQQ&oe=6560CBE4" alt="Basketball Club 2">
+                </div>
+                <div class="gallery-item">
+                    <h3>Volleyball</h3>
+                    <img src="https://pbs.twimg.com/media/DOg_EbMVoAAnyaz?format=jpg&name=360x360" alt="Basketball Club 1">
+                    <img src="https://pbs.twimg.com/media/DOg_IcDVoAICQnf?format=jpg&name=360x360" alt="Basketball Club 2">
+                </div>
+                <div class="gallery-item">
+                    <h3>Table-Tennis</h3>
+                    <img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.6435-9/70353200_864822867233953_5858284298813046784_n.jpg?stp=dst-jpg_s600x600&_nc_cat=101&ccb=1-7&_nc_sid=810d5f&_nc_ohc=9xSDqoiNAE0AX_UNo_7&_nc_ht=scontent-bom1-1.xx&oh=00_AfCfSYVTcAU-JZzeeVq8wMHoTTpZc6AN5xg6NBQuIze2JQ&oe=6560B981" alt="Basketball Club 1">
+                    <img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.6435-9/69916331_864822983900608_8533340533790081024_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=810d5f&_nc_ohc=4HkFCCWSx6kAX8bHyO1&_nc_ht=scontent-bom1-1.xx&oh=00_AfCKjQ3nEFQr00kTPbD2Or4sTN9GJojN-JmweGF3llj8xw&oe=6560B633" alt="Basketball Club 2">
+                    <img src="https://scontent-bom1-2.xx.fbcdn.net/v/t1.6435-9/69666171_864823107233929_2018837695173754880_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=810d5f&_nc_ohc=BX8WEWMvdTEAX8nBLnO&_nc_ht=scontent-bom1-2.xx&oh=00_AfDA4eJv6R9eKRe14j-pabXZCyStYHBaOWhnNF_X-TzjgQ&oe=6560C580" alt="Basketball Club 2">
+                </div>
+                <div class="gallery-item">
+                    <h3>Cricket</h3>
+                    <img src="/IMG_20221123_162808.jpg" alt="Basketball Club 1">
+                    <img src="/IMG_20221125_171326.jpg" alt="Basketball Club 2">
+                    <img src="/IMG_20221125_171606.jpg" alt="Basketball Club 1">
+                    <img src="/IMG_20221130_173545.jpg" alt="Basketball Club 2">
+                </div>
+                <div class="gallery-item">
+                    <h3>Badminton</h3>
+                    <img src="Sports/WhatsApp Image 2023-10-25 at 10.19.09 PM (1).jpeg" alt="Basketball Club 1">
+                    <img src="Sports/WhatsApp Image 2023-10-25 at 10.19.10 PM (1).jpeg" alt="Basketball Club 1">
+                    <img src="Sports/WhatsApp Image 2023-10-25 at 10.19.10 PM.jpeg" alt="Basketball Club 2">
+                    <img src="Sports/WhatsApp Image 2023-10-25 at 10.19.12 PM.jpeg" alt="Basketball Club 1">
+                </div>
+                <!-- Add more Sports Clubs as needed -->
+            </div>
+    <div class="custom-header">
+        <h2>Technical Clubs</h2>
+    </div>
+        <div class="gallery-container">
+            <!-- Subsection for Technical Clubs -->
+            
+            
+            <div class="gallery-item">
+                <h3>Robotics Club</h3>
+                <img src="Robo\WhatsApp Image 2023-10-25 at 10.51.13 PM.jpeg" alt="Coding Club 1">
+                <img src="https://scontent.fbom57-1.fna.fbcdn.net/v/t1.18169-9/29541451_167438583912466_8395734720924002648_n.jpg?stp=c160.0.640.640a_dst-jpg_s851x315&_nc_cat=102&ccb=1-7&_nc_sid=c21ed2&_nc_ohc=hUbQnLbHt8MAX_SIlqL&_nc_ht=scontent.fbom57-1.fna&oh=00_AfAHgpXGDuD55Rxutw72oUQC6dkJ2Zos8RuZNlWDJ2XXDw&oe=6560CA28" alt="Coding Club 2">
+                <img src="https://scontent.fbom57-1.fna.fbcdn.net/v/t1.18169-9/29573011_167438587245799_2845111474936916907_n.jpg?stp=c0.106.640.640a_dst-jpg_s851x315&_nc_cat=108&ccb=1-7&_nc_sid=c21ed2&_nc_ohc=8c0_fQT_rKMAX-rufa1&_nc_ht=scontent.fbom57-1.fna&oh=00_AfBzZ_W_CBng3_Gyecl499lc6B514SSKNmXIWJX_qR_VAw&oe=6560D315" alt="Coding Club 1">
+                <img src="https://scontent.fbom57-1.fna.fbcdn.net/v/t1.18169-9/29570585_167438517245806_1297169843546139412_n.jpg?stp=c0.106.640.640a_dst-jpg_s851x315&_nc_cat=110&ccb=1-7&_nc_sid=c21ed2&_nc_ohc=iT2NQjB9it4AX_csLHe&_nc_ht=scontent.fbom57-1.fna&oh=00_AfAZyoYaCwWDPqZj6EC_YXXkmjqRWB73iG0vrsdI8DKPKQ&oe=6560AAB8" alt="Coding Club 1">
+            </div>
+            <div class="gallery-item">
+                <h3>VR and Gaming Club</h3>
+                <img src="https://vitbhopal.ac.in/file/2022/04/AD_Gaming2-scaled.jpg" alt="Coding Club 1">
+                <img src="https://vitbhopal.ac.in/file/2022/04/AD_Gaming4-1024x683.jpg" alt="Coding Club 2">
+            </div>
+            <div class="gallery-item">
+                <h3>IOS Club</h3>
+                <img src="IOS\WhatsApp Image 2023-10-25 at 10.45.16 PM.jpeg" alt="Coding Club 1">
+                <img src="IOS\WhatsApp Image 2023-10-25 at 10.45.17 PM.jpeg" alt="Coding Club 2">
+            </div>
+            <div class="gallery-item">
+                <h3>VITronix Club</h3>
+                <img src="https://scontent.fbom57-1.fna.fbcdn.net/v/t1.6435-9/55875469_771406983242209_6745534141695000576_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=84c479&_nc_ohc=o3yiFokLtSwAX87Iv2Y&_nc_ht=scontent.fbom57-1.fna&oh=00_AfCBmqY39UK6fGNqFrgIU4T5dYHKJjP3Uh__yNjKfccDyQ&oe=6560C9C3" alt="Coding Club 1">
+                <img src="https://scontent.fbom57-1.fna.fbcdn.net/v/t1.6435-9/55860898_771407209908853_4536183151948464128_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=84c479&_nc_ohc=q3sS-JW4EEEAX_mNZtx&_nc_ht=scontent.fbom57-1.fna&oh=00_AfAUyblWcXxK8q8ORMq1zGe35qZXVHPuGTzSTRaCWLNjtQ&oe=6560C428" alt="Coding Club 2">
+            </div>
+            <div class="gallery-item">
+                <h3>AI-Club</h3>
+                <img src="https://ss-i.thgim.com/public/incoming/h84u4u/article66528442.ece/alternates/LANDSCAPE_1200/PTI01_19_2023_000361A.jpg" alt="Coding Club 1">
+                <img src="https://ss-i.thgim.com/public/incoming/h84u4u/article66528442.ece/alternates/LANDSCAPE_1200/PTI01_19_2023_000361A.jpg" alt="Coding Club 2">
+            </div>
+            <div class="gallery-item">
+                <h3>Android Club</h3>
+                <img src="https://etimg.etb2bimg.com/photo/89583365.cms" alt="Robotics Club 1">
+                <img src="https://ss-i.thgim.com/public/incoming/h84u4u/article66528442.ece/alternates/LANDSCAPE_1200/PTI01_19_2023_000361A.jpg" alt="Robotics Club 2">
+            </div>
+            <div class="gallery-item">
+                <h3>Linux Club</h3>
+                <img src="https://ss-i.thgim.com/public/incoming/h84u4u/article66528442.ece/alternates/LANDSCAPE_1200/PTI01_19_2023_000361A.jpg" alt="Coding Club 1">
+                <img src="https://ss-i.thgim.com/public/incoming/h84u4u/article66528442.ece/alternates/LANDSCAPE_1200/PTI01_19_2023_000361A.jpg" alt="Coding Club 2">
+            </div>
+            <!-- Add more Technical Clubs as needed -->
+        </div>
+    </div>
+
+    <div class="gallery-section">
+    <div class="custom-header">
+        <h2>Art Clubs</h2>
+    </div>
+        <div class="gallery-container">
+            <!-- Subsection for Art Clubs -->
+            <div class="gallery-item">
+                <h3>Dance Club</h3>
+                <img src="Dance\WhatsApp Image 2023-10-25 at 10.44.42 PM.jpeg" alt="Painting Club 1">
+                <img src="Dance\WhatsApp Image 2023-10-25 at 10.44.44 PM.jpeg" alt="Painting Club 2">
+            </div>
+            <div class="gallery-item">
+                <h3>Music & Band Club</h3>
+                <img src="Music/WhatsApp Image 2023-10-25 at 10.43.09 PM.jpeg" alt="Photography Club 1">
+                <img src="Music/WhatsApp Image 2023-10-25 at 10.43.40 PM.jpeg" alt="Photography Club 2">
+            </div>
+            <div class="gallery-item">
+                <h3>Nature & Trekking Club</h3>
+                <img src="https://ss-i.thgim.com/public/incoming/h84u4u/article66528442.ece/alternates/LANDSCAPE_1200/PTI01_19_2023_000361A.jpg" alt="Coding Club 1">
+                <img src="https://ss-i.thgim.com/public/incoming/h84u4u/article66528442.ece/alternates/LANDSCAPE_1200/PTI01_19_2023_000361A.jpg" alt="Coding Club 2">
+            </div>
+            <div class="gallery-item">
+                <h3>Dramatics Club</h3>
+                <img src="https://scontent-bom1-2.xx.fbcdn.net/v/t1.6435-9/80103734_955149404867965_3712808646808174592_n.jpg?stp=dst-jpg_p600x600&_nc_cat=109&ccb=1-7&_nc_sid=810d5f&_nc_ohc=EX65tsneHFcAX_uF6Pa&_nc_ht=scontent-bom1-2.xx&oh=00_AfBFx6t_gAufOGd8fjDFdAoxrAofFfnyUELzUXJV9N1HRw&oe=6560B8A9">
+                <img src="https://scontent-bom1-2.xx.fbcdn.net/v/t1.6435-9/81038394_955149324867973_5940990796109971456_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=810d5f&_nc_ohc=A7sYCx_TkKkAX-2sx01&_nc_ht=scontent-bom1-2.xx&oh=00_AfAKWytilIw7A2KaVri7CS4viqwYH_rjtMuaOKc1jiKU8Q&oe=6560B111" alt="Coding Club 2">
+                <img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.6435-9/52748958_754555681594006_651806521763561472_n.jpg?stp=dst-jpg_p600x600&_nc_cat=102&ccb=1-7&_nc_sid=810d5f&_nc_ohc=S7T4BYj04t0AX9Z3Nkx&_nc_ht=scontent-bom1-1.xx&oh=00_AfCBiP7VsnwqDYiLfS2XBgM-xQderfFGtAGNSYnO168RJg&oe=6560AB94" alt="Coding Club 2">
+            </div>
+            <div class="gallery-item">
+                <h3>Photography & Movie Making</h3>
+                <img src="https://scontent-bom1-1.xx.fbcdn.net/v/t1.6435-9/80397847_955149461534626_544247608525193216_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=810d5f&_nc_ohc=T7MjLXpc76IAX-vLHZr&_nc_ht=scontent-bom1-1.xx&oh=00_AfBGZstIRNrq43NMRw8xD5j03JkWntOGvdeBL40OPp6GBQ&oe=6560BC1E" alt="Coding Club 1">
+            </div>
+            <div class="gallery-item">
+                <h3>Fusion Club</h3>
+                <img src="https://ss-i.thgim.com/public/incoming/h84u4u/article66528442.ece/alternates/LANDSCAPE_1200/PTI01_19_2023_000361A.jpg" alt="Coding Club 1">
+                <img src="https://ss-i.thgim.com/public/incoming/h84u4u/article66528442.ece/alternates/LANDSCAPE_1200/PTI01_19_2023_000361A.jpg" alt="Coding Club 2">
+            </div>
+            <!-- Add more Art Clubs as needed -->
+        </div>
+    </div>
+
+    <div class="gallery-section">
+        <div class="custom-header">
+            <h2>Community Development Clubs</h2>
+        </div>   
+        <div class="gallery-container">
+            <!-- Subsection for Community Clubs -->
+            <div class="gallery-item">
+                <h3>Gujarati Club</h3>
+                <img src="https://scontent.fbom57-1.fna.fbcdn.net/v/t39.30808-6/393304408_627317036225965_7596058006700004445_n.jpg?stp=dst-jpg_p600x600&_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=HgJkIAMxe2gAX9BOgPz&_nc_ht=scontent.fbom57-1.fna&oh=00_AfDhLsEEPCxKOoj0R0btctrtvMD2MwWuTPrObjbJ7AlohQ&oe=653F04BE" alt="Volunteering Club 1">
+                <img src="https://scontent-bom1-2.xx.fbcdn.net/v/t39.30808-6/391653320_627317026225966_6623422599963814426_n.jpg?stp=dst-jpg_p600x600&_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_ohc=gxV_CLF1fZAAX-TK_yF&_nc_ht=scontent-bom1-2.xx&oh=00_AfCk46oK2OzDmDEjR1BzEyr8sBQENjsl0AUeDe4elDE8ug&oe=653E947B" alt="Volunteering Club 2">
+            </div>
+            <div class="gallery-item">
+                <h3>Bengali Club</h3>
+                <img src="https://scontent.fbom57-1.fna.fbcdn.net/v/t39.30808-6/394519537_629223822701953_2157685723050928444_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=aXqC8EIarKsAX8FJeyp&_nc_ht=scontent.fbom57-1.fna&oh=00_AfDYlmtNDMpmGl6mLb8ufHnsDFbSRrlt_o19frUL1dhk_Q&oe=653D4CEA" alt="Environmental Club 1">
+                <img src="https://scontent.fbom57-1.fna.fbcdn.net/v/t39.30808-6/394254879_629223816035287_6307181925911471514_n.jpg?stp=dst-jpg_p600x600&_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=mKomXZ5StrIAX8prTsS&_nc_ht=scontent.fbom57-1.fna&oh=00_AfBTQc0vYvTjK1_LTLaaDwwxs4CcVTrbmIbNyYOCW87e-A&oe=653EE0B3" alt="Environmental Club 2">
+            </div>
+            <div class="gallery-item">
+                <h3>Tamil Club</h3>
+                <img src="https://scontent.fbom57-1.fna.fbcdn.net/v/t39.30808-6/394608753_629223829368619_2279504345652848274_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=BD56Kt2bHDgAX-CKs5g&_nc_ht=scontent.fbom57-1.fna&oh=00_AfDU-JNTbhn9lsdu8E8vo4pGyORVBFNfbg3KwrsOzlK2Cg&oe=653F0438" alt="Environmental Club 1">
+            </div><div class="gallery-item">
+                <h3>Marathi Club</h3>
+                <img src="https://advitya2023.vercel.app/pics/advitya%20final.png" alt="Environmental Club 1">
+                
+            </div>
+            <div class="gallery-item">
+                <h3>Telugu Club</h3>
+                <img src="https://advitya2023.vercel.app/adhav/aadhav.png" alt="Environmental Club 1">
+                
+            </div>
+            <div class="gallery-item">
+                <h3>Hindi Club</h3>
+                <img src="https://scontent.fbom57-1.fna.fbcdn.net/v/t39.30808-6/394251674_629223846035284_4021952774219989492_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=-L3MA2OChOEAX-UJoeh&_nc_ht=scontent.fbom57-1.fna&oh=00_AfBiWw3dr79hgAyEmSUXl0w1onLTaDRYp27iNBBwe9UikA&oe=653D5439" alt="Environmental Club 1">
+                <img src="https://scontent.fbom57-1.fna.fbcdn.net/v/t39.30808-6/394642073_629223839368618_2005883985389162349_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=RgaB0JNYSw8AX_mFKX8&_nc_oc=AQk2i_aV2exdf6Hg4ljBNxZrIbxak4wqw0KwEHzXbxHMBV-HJVODqJM8-LvalagfYu0&_nc_ht=scontent.fbom57-1.fna&oh=00_AfAOC5ULeWm8cg5FYPckcXMWwHIxgkIdyZcvUnK6_iJhNA&oe=653F2595" alt="Environmental Club 2">
+            </div>
+            <!-- Add more Community Clubs as needed -->
+        </div>
+    </div>
+
+   
+    </div>
+
+    <!-- Lightbox and JavaScript for gallery functionality -->
+    <div class="lightbox" id="lightbox">
+        <div class="close-btn" onclick="closeLightbox()">&times;</div>
+        <div class="lightbox-content">
+            <button class="nav-btn left" onclick="prevImage()">&#9665;</button>
+            <img src="" alt="Selected Image" id="lightbox-image">
+            <button class="nav-btn right" onclick="nextImage()">&#9655;</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for lightbox functionality
+const galleryItems = document.querySelectorAll('.gallery-item img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = document.getElementById('lightbox-image');
+let currentIndex = 0;
+
+galleryItems.forEach((item, index) => {
+    item.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        currentIndex = index;
+        showImage(index);
+    });
+});
+
+function showImage(index) {
+    lightboxImage.setAttribute('src', galleryItems[index].getAttribute('src'));
+}
+
+function prevImage() {
+    currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+    showImage(currentIndex);
+}
+
+function nextImage() {
+    currentIndex = (currentIndex + 1) % galleryItems.length;
+    showImage(currentIndex);
+}
+
+function closeLightbox() {
+    lightbox.style.display = 'none';
+}
+
+// Keyboard navigation
+document.addEventListener('keydown', function(event) {
+    if (lightbox.style.display === 'flex') {
+        if (event.key === 'ArrowLeft') {
+            prevImage();
+        } else if (event.key === 'ArrowRight') {
+            nextImage();
+        }
+    }
+});
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

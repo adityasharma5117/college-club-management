@@ -1,0 +1,351 @@
+#vit {
+    align-items: left;
+    
+    width: 200px;
+    border-radius: 20px;
+
+}
+
+nav {
+    
+    padding: 0.5rem;
+    margin-bottom: 25px;
+    border-radius: 25px;
+}
+
+
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.3s;
+}
+
+
+
+main {
+    padding: 2rem;
+}
+
+.club {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 98%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.club h3 {
+    margin-bottom: 0.5rem;
+}
+
+.club a {
+    color: #ff9900;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-bottom: 15px;
+}
+
+.club {
+    transition: transform 0.5s;
+}
+
+.club:hover {
+    transform: scale(1.03);
+}
+
+
+
+
+.club-list {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+
+
+
+body {
+    
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+    background-color: #97DEFF;
+    color: #fff;
+}
+
+
+header {
+    
+    color: rgb(246, 192, 248);
+}
+
+
+nav {
+    
+    color: white;
+    text-align: center;
+}
+
+
+nav a {
+    color: #fff;
+}
+
+
+.club {
+    background-color: #fff;
+    color: #333;
+}
+
+
+.club a {
+    color: rgb(114, 184, 228);
+}
+
+.custom-header {
+    background-color: rgb(144, 97, 206);
+    border-radius: 20px;
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-size: 50px;
+}
+
+.btn-primary {
+    background-color: #19A7CE;
+    border-radius: 30px;
+    color: white;
+    transition: transform 0.3s ease;
+    transform: scale(1.25);
+
+
+
+}
+
+.btn-primary:hover {
+    transform: scale(1.5);
+}
+
+.bg-image {
+    background: url('https://vitbhopal.ac.in/file/2020/02/VIT-Campus-Life-scaled.jpg') center/cover no-repeat;
+    height: 450px;
+    width: 50%;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    float: left;
+    margin-top: 0px;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease;
+}
+
+.bg-image:hover {
+    transform: scale(1.10);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: justify;
+}
+
+.text-center {
+    text-align: center;
+    padding: 20px;
+    color: #333;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    clear: both;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+.club {
+    background-color: white;
+    color: black;
+    border-radius: 30px;
+    /* Add rounded edges */
+    position: relative;
+    overflow: hidden;
+    /* Ensure the rounded corners are visible */
+    transition: transform 0.5s;
+    margin-bottom: 1rem;
+}
+
+nav.text-right {
+    position: absolute;
+    top: 10px;
+    /* Adjust the top value as needed */
+    right: 10px;
+    /* Adjust the right value as needed */
+}
+
+/* Style for the announcements section */
+.announcements {
+    float: right;
+    height: 450px;
+    width: 40%;
+    padding: 20px;
+   
+   
+    margin-left: 20px;
+    margin-top: 0px;
+    margin-bottom: 25px;
+    /* Adjust the margin as needed */
+    border-radius: 20px;
+    overflow: hidden;
+    color: white;
+}
+
+/* Style for the announcements heading */
+.announcements h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: red;
+}
+
+/* Style for the scrolling text container */
+.scrolling-text {
+
+    overflow: hidden;
+}
+
+/* Style for individual announcements */
+.announcement-content {
+    margin: 0;
+    padding: 5px;
+}
+
+/* Style for the scrolling animation */
+@keyframes scroll-up {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-1000%);
+    }
+}
+
+/* Apply the scrolling animation to the announcement content */
+.scrolling-text .announcement-content li {
+    margin: 0;
+    padding: 5px;
+    animation: scroll-up 10s linear infinite;
+    /* Adjust animation duration as needed */
+}
+
+/* Style for the image overlay */
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Adjust the background color and opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for the highlighted text */
+.highlighted-text {
+    text-align: center;
+    color: white;
+    /* Text color on the highlighted background */
+    padding: 20px;
+    max-width: 80%;
+    /* Adjust the maximum width as needed */
+}
+
+.dropdown-menu{
+    background-color: #19A7CE;
+    
+}
+
+.dropdown-item{
+color: white;
+width: 75%;
+}
+/* Add margin and padding to the buttons */
+.btn-group {
+    display: flex;
+    align-items: center;
+    margin-left: 50px; /* Add margin to separate the buttons from the dropdown menu button */
+    margin-right: 30px;
+}
+
+/* Style the login and register buttons */
+.btn-group .btn {
+    margin-right: 30px;
+    border-radius: 20px;
+    border: none; /* Remove default borders */
+}
+
+/* Style the dropdown button with rounded edges and remove default borders */
+.btn.dropdown-toggle {
+    margin-right: 10px;
+    border-radius: 20px;
+    border: none; /* Remove default borders */
+}
+
+/* Style the register button with rounded edges and remove default borders */
+.btn-group .btn.btn-primary.btn-sm {
+    border-radius: 20px;
+    border: none; /* Remove default borders */
+}
+
+.body-image-overlay{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Add these styles for the navigation buttons */
+.nav-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.left {
+    left: 20px;
+}
+
+.right {
+    right: 20px;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- You can customize this CSS separately -->
+    <title>Registration Page</title>
+    <style>
+        body {
+            color: black;
+            background: url('https://vitbhopal.ac.in/file/2020/02/VIT-Bhopal-1-scaled-e1580792779550.jpg') center/cover no-repeat;
+            /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .col-md-6 {
+            background-color: white;
+            border-radius: 30px;
+            padding: 20px;
+            /* Add some padding to create space for form elements */
+            max-width: 650px;
+            /* Limit the maximum width of the container */
+            margin: 0 auto;
+            /* Center the container horizontally */
+            box-sizing: border-box;
+            /* Ensure padding and borders are included in width */
+            height: auto;
+            /* Remove fixed height to allow for dynamic content */
+        }
+
+        .d-grid {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            width: 420px;
+        }
+
+        .overlay{
+             position: fixed;
+                background-color: rgb(0, 0,0, 0.5);
+                inset: 0;
+                z-index: -1;
+            }
+
+        /* Additional styles for improved form appearance */
+        /* ... (Custom CSS for form styling) ... */
+    </style>
+</head>
+
+<body>
+  <div class="overlay"></div>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form id="registrationForm">
+                    <!-- Registration form fields here -->
+                    <h1 class="text-center mb-4">Registration Form</h1>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name:</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="registration_no" class="form-label">Registration Number:</label>
+                        <input type="text" id="registration_no" name="registration_no" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">College Email:</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password:</label>
+                        <input type="password" id="password" name="password" class="form-control" required>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Confirm Password:</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" class="form-control"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="clubPreference" class="form-label">Club Preference:</label>
+                            <select id="clubPreference" name="clubPreference" class="form-select" required>
+                                <option value="Sports Club">Select Your Choice</option>
+                                <option value="Sports Club">Sports Club</option>
+                                <option value="Vitronix Club">Vitronix Club</option>
+                                <option value="Android Club">Android Club</option>
+                                <option value="Linux Club">Linux Club</option>
+                                <option value="Robotics Club">Robotics Club</option>
+                                <option value="Virtual Reality & Gaming Club">Virtual Reality & Gaming Club</option>
+                                <option value="Software Development Club">Software Development Club</option>
+                                <option value="Electric Vehicle Club">Electric Vehicle Club</option>
+                                <option value="Dance Club">Dance Club</option>
+                                <option value="Music & Band Club">Music & Band Club</option>
+                                <option value="Dramatics Club">Dramatics Club</option>
+                                <option value="English Literary Club">English Literary Club</option>
+                                <option value="Photography Club">Photography Club</option>
+                                <option value="Fine Arts Club">Fine Arts Club</option>
+                                <option value="Movie Making Club">Movie Making Club</option>
+                            </select>
+                        </div>
+
+
+
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" id="submitBtn" class="btn btn-primary">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="registerloc.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+ 
+</body>
+
+</html>

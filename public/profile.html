@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+    <title>Profil Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://vitbhopal.ac.in/file/2020/02/VIT-Bhopal-1-scaled-e1580792779550.jpg') center/cover no-repeat;
+        }
+
+        .profile-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+
+        .profile-heading {
+            text-align: center;
+        }
+
+        .profile-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .profile-form label {
+            margin-bottom: 5px;
+        }
+
+        .profile-form input {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .profile-form select {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .profile-form textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .profile-submit {
+            text-align: center;
+        }
+
+        .profile-submit button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .logout {
+            position: absolute;
+            top: 1rem;
+            right: 2rem;
+            text-decoration: none;
+            background-color: #007BFF;
+            cursor: pointer;
+            border-radius: 30px;
+            color: white;
+        }
+        .logout:hover{
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="logout" id="logout">Logout</button>
+    <div class="profile-container">
+        <h2 class="profile-heading">Your Profile</h2>
+        <form class="profile-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" disabled>
+
+            <label for="registrationNumber">Registration Number:</label>
+            <input type="text" id="registrationNumber" name="registrationNumber" disabled>
+
+
+            <label for="email">College Email ID:</label>
+            <input type="email" id="email" name="email" disabled>
+
+            <label for="clubPreference">Club Preference:</label>
+            <select id="clubPreference" name="clubPreference">
+                <option value="" id="selectedOption"></option>
+                <option value="Sports Club">Select Your Choice</option>
+                <option value="Sports Club">Sports Club</option>
+                <option value="Vitronix Club">Vitronix Club</option>
+                <option value="Android Club">Android Club</option>
+                <option value="Linux Club">Linux Club</option>
+                <option value="Robotics Club">Robotics Club</option>
+                <option value="Virtual Reality & Gaming Club">Virtual Reality & Gaming Club</option>
+                <option value="Software Development Club">Software Development Club</option>
+                <option value="Electric Vehicle Club">Electric Vehicle Club</option>
+                <option value="Dance Club">Dance Club</option>
+                <option value="Music & Band Club">Music & Band Club</option>
+                <option value="Dramatics Club">Dramatics Club</option>
+                <option value="English Literary Club">English Literary Club</option>
+                <option value="Photography Club">Photography Club</option>
+                <option value="Fine Arts Club">Fine Arts Club</option>
+                <option value="Movie Making Club">Movie Making Club</option>
+            </select>
+
+            <div class="profile-submit">
+                <button id="editProfile">Save Profile</button>
+            </div>
+        </form>
+    </div>
+    <script src="./profile.js"></script>
+</body>
+
+</html>
